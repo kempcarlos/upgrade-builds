@@ -1598,8 +1598,8 @@ class UpgradeAdapter {
                     })
                         .then(() => this.ng2BootstrapDeferred.resolve(ng1Injector), onError)
                         .then(() => {
-                        let /** @type {?} */ subscription = this.ngZone.onMicrotaskEmpty.subscribe({ next: () => rootScope.$digest() });
-                        rootScope.$on('$destroy', () => { subscription.unsubscribe(); });
+                        /*let subscription = this.ngZone.onMicrotaskEmpty.subscribe({ next: () => rootScope.$digest() });
+                        rootScope.$on('$destroy', () => { subscription.unsubscribe(); });*/
                     });
                 })
                     .catch((e) => this.ng2BootstrapDeferred.reject(e));

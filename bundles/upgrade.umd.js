@@ -1611,8 +1611,8 @@ var UpgradeAdapter = (function () {
                     })
                         .then(function () { return _this.ng2BootstrapDeferred.resolve(ng1Injector); }, onError)
                         .then(function () {
-                        var /** @type {?} */ subscription = _this.ngZone.onMicrotaskEmpty.subscribe({ next: function () { return rootScope.$digest(); } });
-                        rootScope.$on('$destroy', function () { subscription.unsubscribe(); });
+                        /*var subscription = _this.ngZone.onMicrotaskEmpty.subscribe({ next: function () { return rootScope.$digest(); } });
+                        rootScope.$on('$destroy', function () { subscription.unsubscribe(); });*/
                     });
                 })
                     .catch(function (e) { return _this.ng2BootstrapDeferred.reject(e); });
